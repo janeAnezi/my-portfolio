@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/851ac06ed8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/skins/color-1.css">
     <link rel="stylesheet" href="css/style-switcher.css">
@@ -45,9 +47,9 @@
                             <p>I'm a Front-end developer with extensive experience for over 2 years.
                                 My expertise is to implement web designs,ensuring a seamless user experience mobile-first development. 
                                 Extremely motivated to learn and develop skills,keen about the streamlining of the processes to get the effective results.
-                                Self- motivated and capable of working independently and as a part of the team as well</p>
+                                Self-motivated and capable of working independently and as a part of the team as well. </p>
                                
-                                <a href="#" class="btn">Download CV</a>
+                                <a href="images/resume (1).pdf" class="btn">Download CV</a>
                         </div>
                         <div class="home-img padd-15">
                             <img src="images/hero002.jpg" alt="profile photo">
@@ -378,61 +380,62 @@
                     <div class="row">
                         <div class="contact-info-item padd-15">
                             <div class="icon"><i class="fa fa-phone"></i></div>
-                            <h4>Call Me</h4>
+                            <a href=“tel:07053882420”><h4>Call Me</h4></a>
                             <p>+234 7053882420</p>
                         </div>
                         <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-phone"></i></div>
-                            <h4>Call Me</h4>
-                            <p>+234 7053882420</p>
+                            <div class="icon"><i class="fa fa-linkedin"></i></div>
+                            <a href="https://www.linkedin.com/in/jane-anezi-a9771a238/" target="_blank" rel="noopener noreferrer"><h4>Linkedin</h4> </a>
+                            <p>Jane Anezi</p>
                         </div>
                         <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-phone"></i></div>
-                            <h4>Call Me</h4>
-                            <p>+234 7053882420</p>
+                            <div class="icon"><i class="fa fa-twitter"></i></div>
+                            <a href="https://twitter.com/AhnnieA?t=HpTbHQzWuDUIBMUfIQcIOA&s=03" target="_blank" rel="noopener noreferrer"><h4> Twiter</h4></a>
+                            <p>@AhnnieA</p>
                         </div>
                         <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-phone"></i></div>
-                            <h4>Call Me</h4>
-                            <p>+234 7053882420</p>
+                            <div class="icon"><i class="fa fa-github-square"></i></div>
+                            <a href="https://github.com/janeAnezi" target="_blank" rel="noopener noreferrer"><h4>GitHub</h4></a> 
+                            <p>janeAnezi</p>
                         </div> 
                     </div>
                     <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
                     <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGES</h4>
                     <div class="row">
                         <div class="contact-form padd-15">
-                            <div class="row">
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name">
+                            <form method="post" name="contact_form" action="contact-form-handler.php">
+                                <div class="row">
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Name" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Email" name="email">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Subject" name="subject">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject">
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <textarea name="Message" id="" class="form-control" placeholder="Message" ></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <textarea name="" id="" class="form-control" placeholder="Message" ></textarea>
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <a href="mailto:janeanezi6@gmail.com" target="_blank" rel="noopener noreferrer"><button type="submit" class="btn">Send Message</button></a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <button type="submit" class="btn">Send Message</button>
-                                </div>
-                            </div>
-        
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -462,5 +465,46 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="js/app.js"></script>
     <script src="js/style-switcher.js"></script>
+    <script language="JavaScript">
+        var frmvalidator  = new Validator("contactform");
+        frmvalidator.addValidation("name","req","Please provide your name");
+        frmvalidator.addValidation("email","req","Please provide your email");
+        frmvalidator.addValidation("email","email",
+          "Please enter a valid email address");
+        </script>
+
+<!-- <?php
+$errors = '';
+$myemail = 'yourname@website.com';//<-----Put Your email address here.
+if(empty($_POST['name'])  ||
+   empty($_POST['email']) ||
+   empty($_POST['message']))
+{
+    $errors .= "\n Error: all fields are required";
+}
+$name = $_POST['name'];
+$email_address = $_POST['email'];
+$message = $_POST['message'];
+if (!preg_match(
+"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
+$email_address))
+{
+    $errors .= "\n Error: Invalid email address";
+}
+
+if( empty($errors))
+{
+$to = $myemail;
+$email_subject = "Contact form submission: $name";
+$email_body = "You have received a new message. ".
+" Here are the details:\n Name: $name \n ".
+"Email: $email_address\n Message \n $message";
+$headers = "From: $myemail\n";
+$headers .= "Reply-To: $email_address";
+mail($to,$email_subject,$email_body,$headers);
+//redirect to the 'thank you' page
+header('Location: contact-form-thank-you.html');
+}
+?> -->
 </body>
 </html>
