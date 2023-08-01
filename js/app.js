@@ -81,10 +81,10 @@ for(let i = 0; i < totalNavList; i++) {
       }
       function showSection(element) {
         for(let i=0; i<totalSection; i++) {
-            allSection[i].classList.remove("sectionactive");
+            allSection[i].classList.remove("active");
         }
         const target = element.getAttribute("href").split("#")[1];
-         document.querySelector("#" + target).classList.add("sectionactive");
+         document.querySelector("#" + target).classList.add("active");
       }
 
       function updateNav(element) {
